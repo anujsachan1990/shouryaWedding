@@ -1265,7 +1265,6 @@ section.idy_box_full {}
 }
 
 .idy_bokeh {
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/bokeh.png");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -1432,7 +1431,6 @@ section.idy_box_full {}
     display: block;
     content: '';
     position: absolute;
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_arr_l.png");
     width: 50px;
     height: 14px;
     -webkit-background-size: cover;
@@ -1444,7 +1442,6 @@ section.idy_box_full {}
     display: block;
     content: '';
     position: absolute;
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_arr_r.png");
     width: 50px;
     height: 14px;
     -webkit-background-size: cover;
@@ -1466,7 +1463,6 @@ section.idy_box_full {}
 
 .idy_heart_trans {
     margin: 20px 0;
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_heart.png");
     -webkit-background-size: cover;
     background-size: cover;
     width: 100px;
@@ -1496,7 +1492,6 @@ section.idy_box_full {}
     display: block;
     content: '';
     position: absolute;
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_arr_st_r.png");
     width: 31px;
     height: 6px;
     -webkit-background-size: cover;
@@ -1508,7 +1503,6 @@ section.idy_box_full {}
     display: block;
     content: '';
     position: absolute;
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_arr_st_l.png");
     width: 31px;
     height: 6px;
     -webkit-background-size: cover;
@@ -1926,7 +1920,6 @@ section.idy_box_full {}
 .idy_header:after {
     display: block;
     content: '';
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_header.png") center;
     -webkit-background-size: cover;
     background-size: cover;
     height: 60px;
@@ -2450,7 +2443,6 @@ section.idy_box_full {}
 .mobile_menu_header .idy_subtitle:after {
     left: 0;
     transform: translateX(0);
-    background: url("http://idylle.maskandesign.com/red/wp-content/themes/idylle/images/idy_heart.png");
     -webkit-background-size: cover;
     background-size: cover;
 }
