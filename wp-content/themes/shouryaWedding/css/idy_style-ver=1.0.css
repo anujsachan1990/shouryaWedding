@@ -1301,12 +1301,17 @@ section.idy_box_full {}
 
 .idy_idy_rotated_all {
     position: absolute;
-    bottom: 100px;
+    bottom: 200px;
     z-index: 5;
-    left: 50%;
+    left: calc(50% + 40px);
     transform: translateX(-50%);
     text-align: center;
     color: #fff;
+}
+
+.mobile .idy_idy_rotated_all {
+    bottom: 50px;
+    left: calc(50%);
 }
 
 .idy_idy_rotated_all .idy_intro_scroll {
