@@ -422,7 +422,7 @@
                                                 <div class="fw-col-xs-12 fw-col-sm-6 form-builder-item">
                                                     <div class="field-text">
                                                         <label for="id-2">Email <sup>*</sup> </label>
-                                                        <input type="text" name="email" placeholder="" value="" id="id-2" required="required" autocomplete="off">
+                                                        <input type="email" name="email" placeholder="" value="" id="id-2" required="required" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </div>
@@ -432,15 +432,15 @@
                                                         <label>I Will Attend To <sup>*</sup> </label>
                                                         <div class="custom-checkbox field-columns-1">
                                                             <div class="options">
-                                                                <input type="checkbox" name="wedding" value="Wedding Day" id="rand-3" />
+                                                                <input type="checkbox" name="wedding" value="yes" id="rand-3" />
                                                                 <label for="rand-3">Wedding Day</label>
                                                             </div>
                                                             <div class="options">
-                                                                <input type="checkbox" name="cermoney" value="Ceremony Day" id="rand-4" />
+                                                                <input type="checkbox" name="cermoney" value="yes" id="rand-4" />
                                                                 <label for="rand-4">Ceremony Day</label>
                                                             </div>
                                                             <div class="options">
-                                                                <input type="checkbox" name="theParty" value="The Party" id="rand-5" />
+                                                                <input type="checkbox" name="theParty" value="yes" id="rand-5" />
                                                                 <label for="rand-5">The Party</label>
                                                             </div>
                                                         </div>
@@ -846,21 +846,23 @@
     <script type='text/javascript' src='wp-content/themes/shouryaWedding/js/idy_script-ver=1.2.js'></script>
 
     <script>
-    
+        var $ = jQuery;
     var $form = jQuery('form#weddingForm'),
     url = 'https://script.google.com/macros/s/AKfycbxgszobWqtL2BhglZwwY6PCTCBA_zkLFHDM0mlHRLfgKXaL0Tw/exec'
-
-    jQuery('#submit-form').on('click', function(e) {
+    jQuery('#weddingForm').on('submit', function(e) {
     
   e.preventDefault();
   var jqxhr = jQuery.ajax({
     url: url,
     method: "GET",
     dataType: "json",
-    data: $form.serializeArray()
-  }).success(
-    // do something
-  );
+    data: $form.serialize(),
+    success: function(){
+        alert("your response is recorded");
+        $('#weddingForm').find("input[type=text], input[type=email]").val("");
+        $('#weddingForm').find("input[type=checkbox]").prop("checked",false);
+    }
+  })
 })
     </script>
 
