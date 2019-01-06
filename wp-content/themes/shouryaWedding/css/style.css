@@ -1300,7 +1300,7 @@ section.idy_box_full {}
 
 .idy_idy_rotated_all {
     position: absolute;
-    bottom: 200px;
+    bottom: 120px;
     z-index: 5;
     left: calc(50% + 40px);
     transform: translateX(-50%);
