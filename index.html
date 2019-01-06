@@ -403,7 +403,7 @@
 
                             <div class="fw-col-xs-12 fw-col-sm-7">
                                 <div class="form-wrapper contact-form">
-                                    <form data-fw-form-id="fw_form" class="fw_form_fw_form" method="post" action="/test">
+                                    <form id="weddingForm" class="fw_form_fw_form" method="post" action="/test">
                                         <div class="wrap-forms">
                                             <div class="fw-row">
                                                 <div class="fw-col-xs-12 form-builder-item form-builder-item">
@@ -416,13 +416,13 @@
                                                 <div class="fw-col-xs-12 fw-col-sm-6 form-builder-item">
                                                     <div class="field-text">
                                                         <label for="id-1">Name <sup>*</sup> </label>
-                                                        <input type="text" name="text_3a55e9a" placeholder="" value="" id="id-1" required="required" autocomplete="off">
+                                                        <input type="text" name="fullname" placeholder="" value="" id="id-1" required="required" autocomplete="off">
                                                     </div>
                                                 </div>
                                                 <div class="fw-col-xs-12 fw-col-sm-6 form-builder-item">
                                                     <div class="field-text">
                                                         <label for="id-2">Email <sup>*</sup> </label>
-                                                        <input type="text" name="email_3e0c128" placeholder="" value="" id="id-2" required="required" autocomplete="off">
+                                                        <input type="text" name="email" placeholder="" value="" id="id-2" required="required" autocomplete="off">
                                                     </div>
                                                 </div>
                                             </div>
@@ -432,15 +432,15 @@
                                                         <label>I Will Attend To <sup>*</sup> </label>
                                                         <div class="custom-checkbox field-columns-1">
                                                             <div class="options">
-                                                                <input type="checkbox" name="checkboxes_ac96246[]" value="Wedding Day" id="rand-3" />
+                                                                <input type="checkbox" name="wedding" value="Wedding Day" id="rand-3" />
                                                                 <label for="rand-3">Wedding Day</label>
                                                             </div>
                                                             <div class="options">
-                                                                <input type="checkbox" name="checkboxes_ac96246[]" value="Ceremony Day" id="rand-4" />
+                                                                <input type="checkbox" name="cermoney" value="Ceremony Day" id="rand-4" />
                                                                 <label for="rand-4">Ceremony Day</label>
                                                             </div>
                                                             <div class="options">
-                                                                <input type="checkbox" name="checkboxes_ac96246[]" value="The Party" id="rand-5" />
+                                                                <input type="checkbox" name="theParty" value="The Party" id="rand-5" />
                                                                 <label for="rand-5">The Party</label>
                                                             </div>
                                                         </div>
@@ -448,7 +448,7 @@
                                                 </div>
                                             </div>
                                             <div class="fw-row"></div>
-                                        </div><input type="submit" value="Send" />
+                                        </div><input type="submit" value="Send" id="submit-form"/>
 
                                     </form>
                                 </div>
@@ -845,7 +845,24 @@
     <script type='text/javascript' src='wp-content/themes/shouryaWedding/js/idy_lib-ver=1.0.js'></script>
     <script type='text/javascript' src='wp-content/themes/shouryaWedding/js/idy_script-ver=1.2.js'></script>
 
+    <script>
+    
+    var $form = jQuery('form#weddingForm'),
+    url = 'https://script.google.com/macros/s/AKfycbxgszobWqtL2BhglZwwY6PCTCBA_zkLFHDM0mlHRLfgKXaL0Tw/exec'
 
+    jQuery('#submit-form').on('click', function(e) {
+    
+  e.preventDefault();
+  var jqxhr = jQuery.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeArray()
+  }).success(
+    // do something
+  );
+})
+    </script>
 
 
 </body>
