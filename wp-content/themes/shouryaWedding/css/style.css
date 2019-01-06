@@ -4020,7 +4020,11 @@ h1.idy_lettering span {
     position: absolute;
     bottom: 0;
     font-size: 12px;
-    left: 10px;
-    margin-bottom: 15px;
+    left: 30px;
+    margin-bottom: 20px;
     font-style: italic;
+}
+
+.invitation {
+    text-decoration: underline;
 }
