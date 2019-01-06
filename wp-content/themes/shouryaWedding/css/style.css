@@ -3179,6 +3179,10 @@ section.idy_box_full {}
     background-position: center bottom;
 }
 
+.mobile .idy_image_bottom_img {
+    background-position: -21px -143px !important;
+}
+
 .idy_image_bottom .idy_heart {
     position: absolute;
     left: 50%;
@@ -3496,6 +3500,10 @@ section.idy_box_full {}
     height: 350px;
     border-radius: 10px;
     background-position: center;
+}
+
+.mobile .idy_contact_image_img {
+    background-position: -68px -127px;
 }
 
 .idy_contact_image .idy_heart {
