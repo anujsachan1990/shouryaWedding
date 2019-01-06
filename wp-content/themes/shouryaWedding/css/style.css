@@ -4006,3 +4006,13 @@ h1.idy_lettering span {
 /*06.8 Big Screens 3D*/
 
 @media (min-width:1400px) {}
+
+.copyright {
+    z-index: 99999;
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    left: 10px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
